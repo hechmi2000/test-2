@@ -1,0 +1,19 @@
+ALGORITHM orth_vectors
+VAR
+ arr : ARRAY_OF INTEGER [50];
+BEGIN
+function insertion_sort(arr):
+   
+    for i in range(1, len(arr)):
+        cle = arr[i]
+        j = i - 1
+
+       
+        while j >= 0 and cle < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+
+        arr[j + 1] = cle
+
+    return arr
+END
